@@ -56,7 +56,7 @@
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
@@ -253,44 +253,50 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="0603-CAP">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<package name="0603">
+<description>&lt;p&gt;&lt;b&gt;Generic 1608 (0603) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-1.6" y1="0.7" x2="1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="0.7" x2="1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="-0.7" x2="-1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="-1.6" y1="-0.7" x2="-1.6" y2="0.7" width="0.0508" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<wire x1="0" y1="0.0305" x2="0" y2="-0.0305" width="0.5588" layer="21"/>
 <smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
 <package name="EIA3216">
-<wire x1="-1" y1="-1.2" x2="-2.5" y2="-1.2" width="0.2032" layer="21"/>
-<wire x1="-2.5" y1="-1.2" x2="-2.5" y2="1.2" width="0.2032" layer="21"/>
-<wire x1="-2.5" y1="1.2" x2="-1" y2="1.2" width="0.2032" layer="21"/>
-<wire x1="1" y1="-1.2" x2="2.1" y2="-1.2" width="0.2032" layer="21"/>
-<wire x1="2.1" y1="-1.2" x2="2.5" y2="-0.8" width="0.2032" layer="21"/>
-<wire x1="2.5" y1="-0.8" x2="2.5" y2="0.8" width="0.2032" layer="21"/>
-<wire x1="2.5" y1="0.8" x2="2.1" y2="1.2" width="0.2032" layer="21"/>
-<wire x1="2.1" y1="1.2" x2="1" y2="1.2" width="0.2032" layer="21"/>
-<wire x1="0.381" y1="1.016" x2="0.381" y2="-1.016" width="0.127" layer="21"/>
-<smd name="C" x="-1.4" y="0" dx="1.6" dy="1.4" layer="1" rot="R90"/>
-<smd name="A" x="1.4" y="0" dx="1.6" dy="1.4" layer="1" rot="R90"/>
-<text x="-2.54" y="1.381" size="0.4064" layer="25">&gt;NAME</text>
-<text x="0.408" y="1.332" size="0.4064" layer="27">&gt;VALUE</text>
+<description>Generic EIA 3216 (1206) polarized tantalum capacitor</description>
+<wire x1="-1" y1="-1.2" x2="-2.5" y2="-1.2" width="0.2032" layer="51"/>
+<wire x1="-2.5" y1="-1.2" x2="-2.5" y2="1.2" width="0.2032" layer="51"/>
+<wire x1="-2.5" y1="1.2" x2="-1" y2="1.2" width="0.2032" layer="51"/>
+<wire x1="1" y1="-1.2" x2="2.1" y2="-1.2" width="0.2032" layer="51"/>
+<wire x1="2.1" y1="-1.2" x2="2.5" y2="-0.8" width="0.2032" layer="51"/>
+<wire x1="2.5" y1="-0.8" x2="2.5" y2="0.8" width="0.2032" layer="51"/>
+<wire x1="2.5" y1="0.8" x2="2.1" y2="1.2" width="0.2032" layer="51"/>
+<wire x1="2.1" y1="1.2" x2="1" y2="1.2" width="0.2032" layer="51"/>
+<wire x1="2.413" y1="0.762" x2="2.413" y2="-0.762" width="0.2032" layer="21"/>
+<smd name="-" x="-1.4" y="0" dx="1.6" dy="1.4" layer="1" rot="R90"/>
+<smd name="+" x="1.4" y="0" dx="1.6" dy="1.4" layer="1" rot="R90"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 </package>
 <package name="0805">
-<wire x1="-0.3" y1="0.6" x2="0.3" y2="0.6" width="0.1524" layer="21"/>
-<wire x1="-0.3" y1="-0.6" x2="0.3" y2="-0.6" width="0.1524" layer="21"/>
+<description>&lt;p&gt;&lt;b&gt;Generic 2012 (0805) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
 <smd name="1" x="-0.9" y="0" dx="0.8" dy="1.2" layer="1"/>
 <smd name="2" x="0.9" y="0" dx="0.8" dy="1.2" layer="1"/>
-<text x="-0.762" y="0.8255" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.016" y="-1.397" size="0.4064" layer="27">&gt;VALUE</text>
+<text x="0" y="0.889" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.889" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="-1.5" y1="0.8" x2="1.5" y2="0.8" width="0.0508" layer="39"/>
+<wire x1="1.5" y1="0.8" x2="1.5" y2="-0.8" width="0.0508" layer="39"/>
+<wire x1="1.5" y1="-0.8" x2="-1.5" y2="-0.8" width="0.0508" layer="39"/>
+<wire x1="-1.5" y1="-0.8" x2="-1.5" y2="0.8" width="0.0508" layer="39"/>
 </package>
 </packages>
 </library>
@@ -304,14 +310,24 @@ We've spent an enormous amount of time creating and checking these footprints an
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
 <package name="LED-0603">
-<wire x1="0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
-<wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
-<wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
-<wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
-<smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
-<smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
-<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+<description>&lt;B&gt;LED 0603 SMT&lt;/B&gt;&lt;p&gt;
+0603, surface mount.
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count: 2&lt;/li&gt;
+&lt;li&gt;Pin pitch:0.075inch &lt;/li&gt;
+&lt;li&gt;Area: 0.06" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;LED - BLUE&lt;/li&gt;</description>
+<smd name="C" x="0.877" y="0" dx="1" dy="1" layer="1" roundness="30" rot="R270"/>
+<smd name="A" x="-0.877" y="0" dx="1" dy="1" layer="1" roundness="30" rot="R270"/>
+<text x="0" y="0.635" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.635" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="1.5875" y1="0.47625" x2="1.5875" y2="-0.47625" width="0.127" layer="21"/>
+<wire x1="0.15875" y1="0.47625" x2="0.15875" y2="0" width="0.127" layer="51"/>
+<wire x1="0.15875" y1="0" x2="0.15875" y2="-0.47625" width="0.127" layer="51"/>
+<wire x1="0.15875" y1="0" x2="-0.15875" y2="0.3175" width="0.127" layer="51"/>
+<wire x1="0.15875" y1="0" x2="-0.15875" y2="-0.3175" width="0.127" layer="51"/>
 </package>
 </packages>
 </library>
@@ -325,17 +341,17 @@ We've spent an enormous amount of time creating and checking these footprints an
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
 <package name="SOD-323">
-<wire x1="-0.9" y1="0.65" x2="-0.5" y2="0.65" width="0.2032" layer="21"/>
-<wire x1="-0.5" y1="0.65" x2="0.9" y2="0.65" width="0.2032" layer="21"/>
-<wire x1="-0.9" y1="-0.65" x2="-0.5" y2="-0.65" width="0.2032" layer="21"/>
-<wire x1="-0.5" y1="-0.65" x2="0.9" y2="-0.65" width="0.2032" layer="21"/>
-<wire x1="-0.5" y1="0.65" x2="-0.5" y2="-0.65" width="0.2032" layer="21"/>
+<description>SOD-323 (Small Outline Diode)</description>
+<wire x1="-1.77" y1="0.625" x2="-1.77" y2="-0.625" width="0.2032" layer="21"/>
 <smd name="C" x="-1.15" y="0" dx="0.63" dy="0.83" layer="1"/>
 <smd name="A" x="1.15" y="0" dx="0.63" dy="0.83" layer="1"/>
-<text x="-0.889" y="1.016" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.016" y="-1.397" size="0.4064" layer="27">&gt;VALUE</text>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="-0.9" y1="0.625" x2="0.9" y2="0.625" width="0.2032" layer="21"/>
+<wire x1="-0.9" y1="-0.625" x2="0.9" y2="-0.625" width="0.2032" layer="21"/>
 </package>
 <package name="SOT23-3">
+<description>SOT23-3</description>
 <wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
 <wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
 <wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
@@ -344,101 +360,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.1" width="0.2032" layer="21"/>
 <wire x1="0.8" y1="0.7" x2="1.4" y2="0.7" width="0.2032" layer="21"/>
 <wire x1="1.4" y1="0.7" x2="1.4" y2="-0.1" width="0.2032" layer="21"/>
-<smd name="3" x="0" y="1.1" dx="0.8" dy="0.9" layer="1"/>
-<smd name="2" x="0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
 <smd name="1" x="-0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
-<text x="-0.8255" y="1.778" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.016" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
+<smd name="2" x="0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
+<smd name="3" x="0" y="1.1" dx="0.8" dy="0.9" layer="1"/>
+<text x="-1.651" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="1.651" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 </library>
 <library name="esp8266-development-board">
 <packages>
-<package name="QFN32">
-<wire x1="-2.5" y1="2.5" x2="-2.5" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="-2.5" y1="-2.5" x2="2.5" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="2.5" y1="-2.5" x2="2.5" y2="2.5" width="0.127" layer="51"/>
-<wire x1="2.5" y1="2.5" x2="-2.5" y2="2.5" width="0.127" layer="51"/>
-<wire x1="2.1" y1="2.5" x2="2.5" y2="2.5" width="0.127" layer="21"/>
-<wire x1="2.5" y1="2.5" x2="2.5" y2="2.1" width="0.127" layer="21"/>
-<wire x1="2.5" y1="-2.1" x2="2.5" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="2.5" y1="-2.5" x2="2.1" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="-2.1" y1="-2.5" x2="-2.5" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="-2.5" y1="-2.5" x2="-2.5" y2="-2.1" width="0.127" layer="21"/>
-<wire x1="-2.1" y1="2.5" x2="-2.5" y2="2.1" width="0.127" layer="21"/>
-<smd name="1" x="-2.5" y="1.75" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="2" x="-2.5" y="1.25" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="3" x="-2.5" y="0.75" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="4" x="-2.5" y="0.25" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="5" x="-2.5" y="-0.25" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="6" x="-2.5" y="-0.75" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="7" x="-2.5" y="-1.25" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="8" x="-2.5" y="-1.75" dx="0.8" dy="0.2846" layer="1"/>
-<smd name="9" x="-1.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="10" x="-1.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="11" x="-0.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="12" x="-0.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="13" x="0.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="14" x="0.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="15" x="1.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="16" x="1.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
-<smd name="17" x="2.5" y="-1.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="18" x="2.5" y="-1.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="19" x="2.5" y="-0.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="20" x="2.5" y="-0.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="21" x="2.5" y="0.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="22" x="2.5" y="0.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="23" x="2.5" y="1.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="24" x="2.5" y="1.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
-<smd name="25" x="1.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="26" x="1.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="27" x="0.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="28" x="0.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="29" x="-0.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="30" x="-0.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="31" x="-1.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="32" x="-1.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
-<smd name="EP" x="0" y="0" dx="3.15" dy="3.15" layer="1" cream="no"/>
-<text x="-2.5" y="3.1" size="0.4318" layer="25">&gt;Name</text>
-<text x="-2.5" y="-3.1" size="0.4318" layer="27" align="top-left">&gt;Value</text>
-<rectangle x1="0.05" y1="2.18" x2="0.45" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="-0.45" y1="2.18" x2="-0.05" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="-0.95" y1="2.18" x2="-0.55" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="-1.45" y1="2.18" x2="-1.05" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="-1.95" y1="2.18" x2="-1.55" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="0.55" y1="2.18" x2="0.95" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="1.05" y1="2.18" x2="1.45" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="1.55" y1="2.18" x2="1.95" y2="2.42" layer="51" rot="R270"/>
-<rectangle x1="2.1" y1="-0.37" x2="2.5" y2="-0.13" layer="51" rot="R180"/>
-<rectangle x1="2.1" y1="0.13" x2="2.5" y2="0.37" layer="51" rot="R180"/>
-<rectangle x1="2.1" y1="0.63" x2="2.5" y2="0.87" layer="51" rot="R180"/>
-<rectangle x1="2.1" y1="1.13" x2="2.5" y2="1.37" layer="51" rot="R180"/>
-<rectangle x1="2.1" y1="1.63" x2="2.5" y2="1.87" layer="51" rot="R180"/>
-<rectangle x1="2.1" y1="-0.87" x2="2.5" y2="-0.63" layer="51" rot="R180"/>
-<rectangle x1="2.1" y1="-1.37" x2="2.5" y2="-1.13" layer="51" rot="R180"/>
-<rectangle x1="2.1" y1="-1.87" x2="2.5" y2="-1.63" layer="51" rot="R180"/>
-<rectangle x1="-2.5" y1="0.13" x2="-2.1" y2="0.37" layer="51"/>
-<rectangle x1="-2.5" y1="-0.37" x2="-2.1" y2="-0.13" layer="51"/>
-<rectangle x1="-2.5" y1="-0.87" x2="-2.1" y2="-0.63" layer="51"/>
-<rectangle x1="-2.5" y1="-1.37" x2="-2.1" y2="-1.13" layer="51"/>
-<rectangle x1="-2.5" y1="-1.87" x2="-2.1" y2="-1.63" layer="51"/>
-<rectangle x1="-2.5" y1="0.63" x2="-2.1" y2="0.87" layer="51"/>
-<rectangle x1="-2.5" y1="1.13" x2="-2.1" y2="1.37" layer="51"/>
-<rectangle x1="-2.5" y1="1.63" x2="-2.1" y2="1.87" layer="51"/>
-<rectangle x1="-0.45" y1="-2.42" x2="-0.05" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="0.05" y1="-2.42" x2="0.45" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="0.55" y1="-2.42" x2="0.95" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="1.05" y1="-2.42" x2="1.45" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="1.55" y1="-2.42" x2="1.95" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="-0.95" y1="-2.42" x2="-0.55" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="-1.45" y1="-2.42" x2="-1.05" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="-1.95" y1="-2.42" x2="-1.55" y2="-2.18" layer="51" rot="R90"/>
-<rectangle x1="-1.45" y1="0.15" x2="-0.15" y2="1.45" layer="31"/>
-<rectangle x1="0.15" y1="0.15" x2="1.45" y2="1.45" layer="31" rot="R270"/>
-<rectangle x1="-1.45" y1="-1.45" x2="-0.15" y2="-0.15" layer="31" rot="R90"/>
-<rectangle x1="0.15" y1="-1.45" x2="1.45" y2="-0.15" layer="31" rot="R180"/>
-<circle x="-2.7" y="2.7" radius="0.15" width="0" layer="21"/>
-</package>
 <package name="SO08">
 <description>&lt;p&gt;8-pin SOIC package&lt;/p&gt;</description>
 <wire x1="-2.362" y1="-1.803" x2="2.362" y2="-1.803" width="0.1524" layer="51"/>
@@ -1790,21 +1721,22 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="0603-RES">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<package name="0603">
+<description>&lt;p&gt;&lt;b&gt;Generic 1608 (0603) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-1.6" y1="0.7" x2="1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="0.7" x2="1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="-0.7" x2="-1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="-1.6" y1="-0.7" x2="-1.6" y2="0.7" width="0.0508" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
 <smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-<rectangle x1="-0.2286" y1="-0.381" x2="0.2286" y2="0.381" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1891,110 +1823,10 @@ We've spent an enormous amount of time creating and checking these footprints an
 </package>
 </packages>
 </library>
-<library name="SparkFun-Electromechanical">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find anything that moves- switches, relays, buttons, potentiometers. Also, anything that goes on a board but isn't electrical in nature- screws, standoffs, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="STAND-OFF">
-<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
-This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
-<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
-<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
-<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
-<hole x="0" y="0" drill="3.302"/>
-</package>
-<package name="SWITCH-SPST-SMD-A">
-<wire x1="-3.35" y1="1.3" x2="-3.35" y2="-1.3" width="0.127" layer="51"/>
-<wire x1="-3.35" y1="-1.3" x2="3.35" y2="-1.3" width="0.127" layer="51"/>
-<wire x1="3.35" y1="-1.3" x2="3.35" y2="1.3" width="0.127" layer="51"/>
-<wire x1="3.35" y1="1.3" x2="-0.1" y2="1.3" width="0.127" layer="51"/>
-<wire x1="-0.1" y1="1.3" x2="-1.4" y2="1.3" width="0.127" layer="51"/>
-<wire x1="-1.4" y1="1.3" x2="-3.35" y2="1.3" width="0.127" layer="51"/>
-<wire x1="-0.1" y1="1.3" x2="-0.1" y2="2.8" width="0.127" layer="51"/>
-<wire x1="-0.1" y1="2.8" x2="-1.4" y2="2.8" width="0.127" layer="51"/>
-<wire x1="-1.4" y1="2.8" x2="-1.4" y2="1.3" width="0.127" layer="51"/>
-<wire x1="-3.35" y1="0.3" x2="-3.35" y2="-0.3" width="0.2032" layer="21"/>
-<wire x1="3.35" y1="0.3" x2="3.35" y2="-0.3" width="0.2032" layer="21"/>
-<wire x1="2.7" y1="1.3" x2="-2.7" y2="1.3" width="0.2032" layer="21"/>
-<wire x1="1.5" y1="-1.3" x2="0" y2="-1.3" width="0.2032" layer="21"/>
-<smd name="1" x="-2.25" y="-1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
-<smd name="2" x="-0.75" y="-1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
-<smd name="3" x="2.25" y="-1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
-<smd name="GND1" x="-3.65" y="1" dx="1" dy="0.6" layer="1"/>
-<smd name="GND2" x="-3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
-<smd name="GND3" x="3.65" y="1" dx="1" dy="0.6" layer="1"/>
-<smd name="GND4" x="3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
-<text x="-1.27" y="0.635" size="0.6096" layer="25">&gt;Name</text>
-<text x="-1.27" y="-1.27" size="0.6096" layer="27">&gt;Value</text>
-<hole x="-1.5" y="0" drill="0.9"/>
-<hole x="1.5" y="0" drill="0.9"/>
-</package>
-</packages>
-</library>
-<library name="SparkFun-RF">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find things that send or receive RF- GPS, cellular modules, Bluetooth, WiFi, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="TRACE_ANTENNA_2.4GHZ_25.7MM">
-<polygon width="0.0254" layer="1">
-<vertex x="-0.23" y="0"/>
-<vertex x="-0.23" y="2.28"/>
-<vertex x="-0.73" y="2.69"/>
-<vertex x="-3.88" y="2.69"/>
-<vertex x="-3.88" y="3.9"/>
-<vertex x="-2.88" y="3.9"/>
-<vertex x="-2.88" y="4.7"/>
-<vertex x="-8.68" y="4.7"/>
-<vertex x="-8.68" y="2.03"/>
-<vertex x="-0.68" y="2.03"/>
-<vertex x="-0.68" y="0"/>
-<vertex x="-1.68" y="0"/>
-<vertex x="-1.68" y="0.7"/>
-<vertex x="-2.88" y="0.7"/>
-<vertex x="-2.88" y="0"/>
-<vertex x="-3.88" y="0"/>
-<vertex x="-3.88" y="0.74"/>
-<vertex x="-10.86" y="0.74"/>
-<vertex x="-10.86" y="6.91"/>
-<vertex x="14.72" y="6.91"/>
-<vertex x="14.72" y="5.7"/>
-<vertex x="-1.68" y="5.7"/>
-<vertex x="-1.68" y="3.9"/>
-<vertex x="-0.68" y="3.9"/>
-<vertex x="-0.68" y="3.29"/>
-<vertex x="0.23" y="2.53"/>
-<vertex x="0.23" y="0"/>
-</polygon>
-<smd name="ANT" x="0" y="0.23" dx="0.46" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="GND" x="-1.18" y="0.23" dx="1" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="GND2" x="-3.38" y="0.23" dx="1" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-0.68" y1="0" x2="-11" y2="0" width="0.1" layer="51"/>
-<wire x1="-0.68" y1="-2" x2="-0.68" y2="0" width="0.1" layer="51"/>
-<wire x1="0.68" y1="0" x2="0.68" y2="-2" width="0.1" layer="51"/>
-<wire x1="0.68" y1="0" x2="14.75" y2="0" width="0.1" layer="51"/>
-<text x="-11.049" y="-1.397" size="0.889" layer="51" font="vector">Ground Plane</text>
-<text x="2.921" y="-1.397" size="0.889" layer="51" font="vector">Ground Plane</text>
-<wire x1="-11" y1="7.52" x2="14.75" y2="7.52" width="0.1" layer="51"/>
-<text x="-4.449" y="7.703" size="0.889" layer="51" font="vector">Board edge</text>
-</package>
-</packages>
-</library>
 <library name="4h-logo">
 <packages>
 <package name="4H-1.35IN_WIDE">
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="9.732875" y="1.38785625"/>
 <vertex x="9.692640625" y="1.3407125"/>
 <vertex x="9.697515625" y="1.329740625"/>
@@ -2010,7 +1842,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="9.906" y="1.248865625"/>
 <vertex x="9.732059375" y="1.38785625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="11.503153125" y="3.54136875"/>
 <vertex x="11.316615625" y="3.313784375"/>
 <vertex x="11.3832625" y="3.260140625"/>
@@ -2027,7 +1859,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="11.553546875" y="3.499915625"/>
 <vertex x="11.502340625" y="3.54136875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="1.867815625" y="10.491215625"/>
 <vertex x="2.45709375" y="9.980371875"/>
 <vertex x="2.4932625" y="10.018165625"/>
@@ -2320,7 +2152,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="1.935278125" y="10.612321875"/>
 <vertex x="1.870659375" y="10.492028125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="1.867815625" y="10.491215625"/>
 <vertex x="1.811325" y="10.386365625"/>
 <vertex x="1.5930875" y="10.060025"/>
@@ -2340,7 +2172,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="2.45709375" y="9.979559375"/>
 <vertex x="1.867815625" y="10.490403125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="0.704696875" y="2.86349375"/>
 <vertex x="0.941628125" y="2.713125"/>
 <vertex x="1.18425" y="2.45221875"/>
@@ -2363,7 +2195,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="1.4183375" y="3.446271875"/>
 <vertex x="0.703884375" y="2.86511875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="10.238028125" y="1.294790625"/>
 <vertex x="10.17788125" y="1.343153125"/>
 <vertex x="10.17585" y="1.3374625"/>
@@ -2394,7 +2226,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="10.236809375" y="1.2891"/>
 <vertex x="10.238840625" y="1.295196875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="10.238028125" y="1.294790625"/>
 <vertex x="10.271759375" y="1.397609375"/>
 <vertex x="10.218521875" y="1.49189375"/>
@@ -2418,7 +2250,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="10.177475" y="1.34274375"/>
 <vertex x="10.237621875" y="1.294384375"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="10.31605625" y="2.0994625"/>
 <vertex x="10.2591625" y="2.02915625"/>
 <vertex x="10.457484375" y="1.871065625"/>
@@ -2439,7 +2271,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="10.513975" y="1.942184375"/>
 <vertex x="10.31605625" y="2.100275"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="10.58428125" y="2.33355"/>
 <vertex x="10.507471875" y="2.3185125"/>
 <vertex x="10.442446875" y="2.262428125"/>
@@ -2482,7 +2314,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="10.656215625" y="2.3059125"/>
 <vertex x="10.583875" y="2.33355"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="9.540240625" y="1.838553125"/>
 <vertex x="9.630053125" y="2.021434375"/>
 <vertex x="9.63086875" y="2.024684375"/>
@@ -2505,7 +2337,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="8.631528125" y="2.502609375"/>
 <vertex x="9.540240625" y="1.838146875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="11.197134375" y="3.163009375"/>
 <vertex x="11.265003125" y="3.11505625"/>
 <vertex x="11.269878125" y="3.141471875"/>
@@ -2526,7 +2358,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="11.2068875" y="3.189834375"/>
 <vertex x="11.19631875" y="3.162196875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="11.197134375" y="3.163009375"/>
 <vertex x="11.17640625" y="3.109365625"/>
 <vertex x="11.20648125" y="3.023209375"/>
@@ -2541,7 +2373,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="11.265409375" y="3.11505625"/>
 <vertex x="11.197540625" y="3.163009375"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="9.794240625" y="9.777984375"/>
 <vertex x="9.678009375" y="9.8385375"/>
 <vertex x="9.405721875" y="10.0608375"/>
@@ -2558,7 +2390,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="9.3004625" y="9.137903125"/>
 <vertex x="9.793428125" y="9.777984375"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="11.113821875" y="3.06344375"/>
 <vertex x="10.926878125" y="2.837078125"/>
 <vertex x="10.9927125" y="2.783434375"/>
@@ -2575,7 +2407,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="11.16299375" y="3.022803125"/>
 <vertex x="11.113821875" y="3.0630375"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="10.795609375" y="2.63956875"/>
 <vertex x="10.697259375" y="2.576575"/>
 <vertex x="10.65255625" y="2.47700625"/>
@@ -2606,7 +2438,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="10.912246875" y="2.62778125"/>
 <vertex x="10.796828125" y="2.63956875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="33.227671875" y="0.989178125"/>
 <vertex x="33.227671875" y="0.08696875"/>
 <vertex x="32.922871875" y="0.08696875"/>
@@ -2634,7 +2466,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="33.437371875" y="1.330553125"/>
 <vertex x="33.229296875" y="0.989178125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="31.10910625" y="2.3550875"/>
 <vertex x="30.849825" y="1.7072875"/>
 <vertex x="30.805525" y="1.5963375"/>
@@ -2662,7 +2494,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="31.420815625" y="2.35386875"/>
 <vertex x="31.10910625" y="2.35386875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="31.38058125" y="0.707540625"/>
 <vertex x="31.37651875" y="0.92903125"/>
 <vertex x="30.841696875" y="0.92903125"/>
@@ -2679,7 +2511,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="30.65028125" y="0.433628125"/>
 <vertex x="30.756353125" y="0.707540625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="29.150665625" y="2.341675"/>
 <vertex x="29.17464375" y="2.073046875"/>
 <vertex x="29.3242" y="2.04581875"/>
@@ -2689,7 +2521,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="29.4489625" y="2.2734"/>
 <vertex x="29.2250375" y="2.33558125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="29.150665625" y="2.341675"/>
 <vertex x="28.9933875" y="2.35468125"/>
 <vertex x="28.14523125" y="2.35468125"/>
@@ -2722,7 +2554,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="29.17505" y="2.072234375"/>
 <vertex x="29.151071875" y="2.3408625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="27.09265625" y="2.35468125"/>
 <vertex x="27.09265625" y="2.1043375"/>
 <vertex x="26.003909375" y="2.1043375"/>
@@ -2737,7 +2569,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="25.696265625" y="2.35386875"/>
 <vertex x="27.09265625" y="2.35386875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="25.12568125" y="0.555140625"/>
 <vertex x="25.171603125" y="0.534415625"/>
 <vertex x="25.291896875" y="0.40315"/>
@@ -2786,7 +2618,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="24.953365625" y="0.43931875"/>
 <vertex x="25.072440625" y="0.531978125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="21.35388125" y="2.344521875"/>
 <vertex x="21.398990625" y="2.30225625"/>
 <vertex x="21.618040625" y="2.01736875"/>
@@ -2814,7 +2646,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="21.13605" y="2.35305625"/>
 <vertex x="21.293734375" y="2.35305625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="20.693075" y="2.35468125"/>
 <vertex x="20.693075" y="2.1043375"/>
 <vertex x="19.604328125" y="2.1043375"/>
@@ -2829,13 +2661,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="19.296684375" y="2.35386875"/>
 <vertex x="20.693075" y="2.35386875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="18.688303125" y="0.087375"/>
 <vertex x="18.381471875" y="0.087375"/>
 <vertex x="18.381471875" y="2.3550875"/>
 <vertex x="18.688303125" y="2.3550875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="17.753990625" y="0.555140625"/>
 <vertex x="17.7999125" y="0.534415625"/>
 <vertex x="17.920209375" y="0.40315"/>
@@ -2884,7 +2716,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="17.582084375" y="0.4389125"/>
 <vertex x="17.701159375" y="0.531571875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="15.639896875" y="2.0003"/>
 <vertex x="15.609825" y="1.9645375"/>
 <vertex x="15.568778125" y="1.952753125"/>
@@ -2938,7 +2770,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="15.7138625" y="2.146196875"/>
 <vertex x="15.639490625" y="2.00070625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="24.885090625" y="3.1012375"/>
 <vertex x="24.576634375" y="3.1012375"/>
 <vertex x="24.576634375" y="4.13268125"/>
@@ -2952,7 +2784,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="24.576634375" y="5.36895"/>
 <vertex x="24.885090625" y="5.36895"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="22.72345" y="5.36895"/>
 <vertex x="22.72345" y="5.11129375"/>
 <vertex x="21.991115625" y="5.11129375"/>
@@ -2963,7 +2795,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="20.94829375" y="5.36895"/>
 <vertex x="22.7242625" y="5.36895"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="19.749821875" y="3.345078125"/>
 <vertex x="20.00138125" y="3.392628125"/>
 <vertex x="20.189140625" y="3.52551875"/>
@@ -2987,7 +2819,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="19.309284375" y="3.5267375"/>
 <vertex x="19.497446875" y="3.392628125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="17.330115625" y="5.394146875"/>
 <vertex x="17.098059375" y="5.374234375"/>
 <vertex x="16.874540625" y="5.308803125"/>
@@ -3038,7 +2870,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="17.5633875" y="5.374234375"/>
 <vertex x="17.330928125" y="5.394146875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="17.988078125" y="3.27233125"/>
 <vertex x="17.818609375" y="3.512109375"/>
 <vertex x="17.66255" y="3.40400625"/>
@@ -3049,7 +2881,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="17.975884375" y="3.262171875"/>
 <vertex x="17.987671875" y="3.271925"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="15.352165625" y="4.003446875"/>
 <vertex x="15.352165625" y="3.1012375"/>
 <vertex x="15.046959375" y="3.1012375"/>
@@ -3077,7 +2909,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="15.76831875" y="4.686196875"/>
 <vertex x="15.56024375" y="4.344821875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="29.031184375" y="6.373571875"/>
 <vertex x="30.012640625" y="6.373571875"/>
 <vertex x="30.012640625" y="6.1159125"/>
@@ -3086,7 +2918,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="29.031996875" y="8.383625"/>
 <vertex x="29.031996875" y="6.373978125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="27.219046875" y="8.383625"/>
 <vertex x="27.08940625" y="8.059725"/>
 <vertex x="26.9597625" y="7.735825"/>
@@ -3115,7 +2947,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="27.79044375" y="7.735825"/>
 <vertex x="27.5311625" y="8.383625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="27.8384" y="7.615121875"/>
 <vertex x="27.63316875" y="7.3859125"/>
 <vertex x="27.679903125" y="7.26480625"/>
@@ -3133,7 +2965,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="27.919275" y="7.411109375"/>
 <vertex x="27.83799375" y="7.614715625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="24.398225" y="8.373059375"/>
 <vertex x="24.443334375" y="8.3312"/>
 <vertex x="24.662384375" y="8.0463125"/>
@@ -3161,7 +2993,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="24.18039375" y="8.3828125"/>
 <vertex x="24.338484375" y="8.3828125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="23.029875" y="8.342984375"/>
 <vertex x="22.9782625" y="8.0780125"/>
 <vertex x="23.226978125" y="7.9048875"/>
@@ -3182,7 +3014,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="23.0973375" y="8.323884375"/>
 <vertex x="23.02946875" y="8.343796875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="23.029875" y="8.342984375"/>
 <vertex x="22.87381875" y="8.388503125"/>
 <vertex x="22.64135625" y="8.408821875"/>
@@ -3223,13 +3055,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="22.97785625" y="8.0780125"/>
 <vertex x="23.02946875" y="8.342984375"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="21.04583125" y="6.1159125"/>
 <vertex x="20.739" y="6.1159125"/>
 <vertex x="20.739" y="8.383625"/>
 <vertex x="21.04583125" y="8.383625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="20.359015625" y="8.383625"/>
 <vertex x="20.359015625" y="8.12596875"/>
 <vertex x="19.62668125" y="8.12596875"/>
@@ -3240,7 +3072,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="18.583859375" y="8.383625"/>
 <vertex x="20.359828125" y="8.383625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="17.518684375" y="8.383625"/>
 <vertex x="17.259403125" y="7.735825"/>
 <vertex x="17.162678125" y="7.494015625"/>
@@ -3268,7 +3100,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="17.8299875" y="8.38321875"/>
 <vertex x="17.518278125" y="8.38321875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="17.688559375" y="6.736078125"/>
 <vertex x="17.639790625" y="6.95756875"/>
 <vertex x="17.251275" y="6.95756875"/>
@@ -3286,7 +3118,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="17.165521875" y="6.7364875"/>
 <vertex x="17.688153125" y="6.7364875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="14.6978625" y="8.373059375"/>
 <vertex x="14.742565625" y="8.3312"/>
 <vertex x="14.961615625" y="8.0463125"/>
@@ -3315,7 +3147,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="14.48003125" y="8.3828125"/>
 <vertex x="14.638121875" y="8.3828125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="20.634553125" y="9.13018125"/>
 <vertex x="20.09648125" y="9.13018125"/>
 <vertex x="20.09648125" y="10.104321875"/>
@@ -3329,13 +3161,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="20.09648125" y="11.436096875"/>
 <vertex x="20.634553125" y="11.436096875"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="16.808296875" y="10.290046875"/>
 <vertex x="17.66295625" y="10.290046875"/>
 <vertex x="17.66295625" y="9.8942125"/>
 <vertex x="16.808296875" y="9.8942125"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="15.161971875" y="9.660534375"/>
 <vertex x="15.152625" y="10.02548125"/>
 <vertex x="14.727528125" y="10.02548125"/>
@@ -3350,7 +3182,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="14.39346875" y="9.660534375"/>
 <vertex x="15.162378125" y="9.660534375"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="15.161971875" y="9.660534375"/>
 <vertex x="15.320875" y="9.660534375"/>
 <vertex x="15.320875" y="9.129775"/>
@@ -3375,12 +3207,241 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="15.15221875" y="10.0258875"/>
 <vertex x="15.161565625" y="9.660940625"/>
 </polygon>
-<polygon width="0" layer="21">
+<polygon width="0.0254" layer="21">
 <vertex x="12.49558125" y="11.517375"/>
 <vertex x="12.9857" y="11.517375"/>
 <vertex x="12.9857" y="0"/>
 <vertex x="12.49558125" y="0"/>
 </polygon>
+</package>
+</packages>
+</library>
+<library name="SparkFun-Hardware">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+This library contains board components that are not electrical in nature, such as stand-offs, magnets, and Actobotics. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="STAND-OFF">
+<description>&lt;h3&gt;Standoff (#4 Screw)&lt;/h3&gt;
+&lt;p&gt;This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components.&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;STAND-OFF&lt;/li&gt;&lt;/ul&gt;</description>
+<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<hole x="0" y="0" drill="3.302"/>
+<text x="0" y="2.032" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.032" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+</packages>
+</library>
+<library name="SparkFun-Switches">
+<description>&lt;h3&gt;SparkFun Switches, Buttons, Encoders&lt;/h3&gt;
+In this library you'll find switches, buttons, joysticks, and anything that moves to create or disrupt an electrical connection.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="SWITCH_SPST_SMD_A">
+<description>&lt;h3&gt;SPDT Slide Switch - SMD&lt;/h3&gt;
+&lt;p&gt;Single-pole, double-throw (SPDT) switch.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdn.sparkfun.com/datasheets/Components/Switches/SLIDE.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
+<wire x1="-3.35" y1="1.3" x2="-3.35" y2="-1.3" width="0.127" layer="51"/>
+<wire x1="-3.35" y1="-1.3" x2="3.35" y2="-1.3" width="0.127" layer="51"/>
+<wire x1="3.35" y1="-1.3" x2="3.35" y2="1.3" width="0.127" layer="51"/>
+<wire x1="3.35" y1="1.3" x2="-0.1" y2="1.3" width="0.127" layer="51"/>
+<wire x1="-0.1" y1="1.3" x2="-1.4" y2="1.3" width="0.127" layer="51"/>
+<wire x1="-1.4" y1="1.3" x2="-3.35" y2="1.3" width="0.127" layer="51"/>
+<wire x1="-0.1" y1="1.3" x2="-0.1" y2="2.8" width="0.127" layer="51"/>
+<wire x1="-0.1" y1="2.8" x2="-1.4" y2="2.8" width="0.127" layer="51"/>
+<wire x1="-1.4" y1="2.8" x2="-1.4" y2="1.3" width="0.127" layer="51"/>
+<wire x1="-3.477" y1="0.427" x2="-3.477" y2="-0.427" width="0.2032" layer="21"/>
+<wire x1="3.477" y1="0.427" x2="3.477" y2="-0.427" width="0.2032" layer="21"/>
+<wire x1="2.7" y1="1.427" x2="-2.7" y2="1.427" width="0.2032" layer="21"/>
+<wire x1="1.627" y1="-1.427" x2="-0.127" y2="-1.427" width="0.2032" layer="21"/>
+<smd name="1" x="-2.25" y="-1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
+<smd name="2" x="-0.75" y="-1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
+<smd name="3" x="2.25" y="-1.75" dx="0.7" dy="1.5" layer="1" rot="R180"/>
+<smd name="GND1" x="-3.65" y="1" dx="1" dy="0.6" layer="1"/>
+<smd name="GND2" x="-3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
+<smd name="GND3" x="3.65" y="1" dx="1" dy="0.6" layer="1"/>
+<smd name="GND4" x="3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
+<hole x="-1.5" y="0" drill="0.9"/>
+<hole x="1.5" y="0" drill="0.9"/>
+<text x="0.762" y="-1.397" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center">&gt;Name</text>
+<text x="0" y="1.397" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center">&gt;Value</text>
+</package>
+</packages>
+</library>
+<library name="SparkFun-RF">
+<description>&lt;h3&gt;SparkFun RF, WiFi, Cellular, and Bluetooth&lt;/h3&gt;
+In this library you'll find things that send or receive RF-- cellular modules, Bluetooth, WiFi, etc.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="TRACE_ANTENNA_2.4GHZ_25.7MM">
+<description>&lt;h3&gt;2.4GHz Inverted F PCB Trace Antenna&lt;/h3&gt;
+&lt;p&gt;PCB trace antenna with a 25.7 x 7.5 mm footprint.&lt;/p&gt;
+&lt;p&gt;Based on layout from &lt;a href="http://www.ti.com/lit/an/swru120b/swru120b.pdf"&gt;TI design note DN0007&lt;/a&gt;.&lt;/p&gt;</description>
+<polygon width="0.002540625" layer="1">
+<vertex x="-0.23" y="0"/>
+<vertex x="-0.23" y="2.28"/>
+<vertex x="-0.73" y="2.69"/>
+<vertex x="-3.88" y="2.69"/>
+<vertex x="-3.88" y="3.9"/>
+<vertex x="-2.88" y="3.9"/>
+<vertex x="-2.88" y="4.7"/>
+<vertex x="-8.68" y="4.7"/>
+<vertex x="-8.68" y="2.03"/>
+<vertex x="-0.68" y="2.03"/>
+<vertex x="-0.68" y="0"/>
+<vertex x="-1.68" y="0"/>
+<vertex x="-1.68" y="0.7"/>
+<vertex x="-2.88" y="0.7"/>
+<vertex x="-2.88" y="0"/>
+<vertex x="-3.88" y="0"/>
+<vertex x="-3.88" y="0.74"/>
+<vertex x="-10.86" y="0.74"/>
+<vertex x="-10.86" y="6.91"/>
+<vertex x="14.72" y="6.91"/>
+<vertex x="14.72" y="5.7"/>
+<vertex x="-1.68" y="5.7"/>
+<vertex x="-1.68" y="3.9"/>
+<vertex x="-0.68" y="3.9"/>
+<vertex x="-0.68" y="3.29"/>
+<vertex x="0.23" y="2.53"/>
+<vertex x="0.23" y="0"/>
+</polygon>
+<smd name="ANT" x="0" y="0.23" dx="0.46" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="GND" x="-1.18" y="0.23" dx="1" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="GND2" x="-3.38" y="0.23" dx="1" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="-0.68" y1="0" x2="-11" y2="0" width="0.1" layer="51"/>
+<wire x1="-0.68" y1="-2" x2="-0.68" y2="0" width="0.1" layer="51"/>
+<wire x1="0.68" y1="0" x2="0.68" y2="-2" width="0.1" layer="51"/>
+<wire x1="0.68" y1="0" x2="14.75" y2="0" width="0.1" layer="51"/>
+<text x="-11.049" y="-1.397" size="0.889" layer="51" font="vector">Ground Plane</text>
+<text x="2.921" y="-1.397" size="0.889" layer="51" font="vector">Ground Plane</text>
+<wire x1="-11" y1="7.52" x2="14.75" y2="7.52" width="0.1" layer="51"/>
+<text x="-4.449" y="7.703" size="0.889" layer="51" font="vector">Board edge</text>
+<text x="3.81" y="4.445" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="3.81" y="3.81" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="QFN32-5X5MM">
+<description>&lt;h3&gt;32-pin QFN 5.0 x 5.0 mm, 0.5mm pitch&lt;/h3&gt;
+&lt;p&gt;Used by ESP8266&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://espressif.com/sites/default/files/documentation/0a-esp8266_datasheet_en_v4.4.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
+<wire x1="-2.5" y1="2.5" x2="-2.5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="-2.5" x2="2.5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="2.5" y1="-2.5" x2="2.5" y2="2.5" width="0.127" layer="51"/>
+<wire x1="2.5" y1="2.5" x2="-2.5" y2="2.5" width="0.127" layer="51"/>
+<wire x1="2.1" y1="2.627" x2="2.627" y2="2.627" width="0.2032" layer="21"/>
+<wire x1="2.627" y1="2.627" x2="2.627" y2="2.1" width="0.2032" layer="21"/>
+<wire x1="2.627" y1="-2.1" x2="2.627" y2="-2.627" width="0.2032" layer="21"/>
+<wire x1="2.627" y1="-2.627" x2="2.1" y2="-2.627" width="0.2032" layer="21"/>
+<wire x1="-2.1" y1="-2.627" x2="-2.627" y2="-2.627" width="0.2032" layer="21"/>
+<wire x1="-2.627" y1="-2.627" x2="-2.627" y2="-2.1" width="0.2032" layer="21"/>
+<wire x1="-2.1" y1="2.754" x2="-2.754" y2="2.1" width="0.2032" layer="21"/>
+<smd name="1" x="-2.5" y="1.75" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="2" x="-2.5" y="1.25" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="3" x="-2.5" y="0.75" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="4" x="-2.5" y="0.25" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="5" x="-2.5" y="-0.25" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="6" x="-2.5" y="-0.75" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="7" x="-2.5" y="-1.25" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="8" x="-2.5" y="-1.75" dx="0.8" dy="0.2846" layer="1"/>
+<smd name="9" x="-1.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="10" x="-1.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="11" x="-0.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="12" x="-0.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="13" x="0.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="14" x="0.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="15" x="1.25" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="16" x="1.75" y="-2.5" dx="0.8" dy="0.2846" layer="1" rot="R90"/>
+<smd name="17" x="2.5" y="-1.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="18" x="2.5" y="-1.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="19" x="2.5" y="-0.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="20" x="2.5" y="-0.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="21" x="2.5" y="0.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="22" x="2.5" y="0.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="23" x="2.5" y="1.25" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="24" x="2.5" y="1.75" dx="0.8" dy="0.2846" layer="1" rot="R180"/>
+<smd name="25" x="1.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="26" x="1.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="27" x="0.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="28" x="0.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="29" x="-0.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="30" x="-0.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="31" x="-1.25" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="32" x="-1.75" y="2.5" dx="0.8" dy="0.2846" layer="1" rot="R270"/>
+<smd name="EP" x="0" y="0" dx="3.15" dy="3.15" layer="1" cream="no"/>
+<rectangle x1="0.05" y1="2.18" x2="0.45" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="-0.45" y1="2.18" x2="-0.05" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="-0.95" y1="2.18" x2="-0.55" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="-1.45" y1="2.18" x2="-1.05" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="-1.95" y1="2.18" x2="-1.55" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="0.55" y1="2.18" x2="0.95" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="1.05" y1="2.18" x2="1.45" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="1.55" y1="2.18" x2="1.95" y2="2.42" layer="51" rot="R270"/>
+<rectangle x1="2.1" y1="-0.37" x2="2.5" y2="-0.13" layer="51" rot="R180"/>
+<rectangle x1="2.1" y1="0.13" x2="2.5" y2="0.37" layer="51" rot="R180"/>
+<rectangle x1="2.1" y1="0.63" x2="2.5" y2="0.87" layer="51" rot="R180"/>
+<rectangle x1="2.1" y1="1.13" x2="2.5" y2="1.37" layer="51" rot="R180"/>
+<rectangle x1="2.1" y1="1.63" x2="2.5" y2="1.87" layer="51" rot="R180"/>
+<rectangle x1="2.1" y1="-0.87" x2="2.5" y2="-0.63" layer="51" rot="R180"/>
+<rectangle x1="2.1" y1="-1.37" x2="2.5" y2="-1.13" layer="51" rot="R180"/>
+<rectangle x1="2.1" y1="-1.87" x2="2.5" y2="-1.63" layer="51" rot="R180"/>
+<rectangle x1="-2.5" y1="0.13" x2="-2.1" y2="0.37" layer="51"/>
+<rectangle x1="-2.5" y1="-0.37" x2="-2.1" y2="-0.13" layer="51"/>
+<rectangle x1="-2.5" y1="-0.87" x2="-2.1" y2="-0.63" layer="51"/>
+<rectangle x1="-2.5" y1="-1.37" x2="-2.1" y2="-1.13" layer="51"/>
+<rectangle x1="-2.5" y1="-1.87" x2="-2.1" y2="-1.63" layer="51"/>
+<rectangle x1="-2.5" y1="0.63" x2="-2.1" y2="0.87" layer="51"/>
+<rectangle x1="-2.5" y1="1.13" x2="-2.1" y2="1.37" layer="51"/>
+<rectangle x1="-2.5" y1="1.63" x2="-2.1" y2="1.87" layer="51"/>
+<rectangle x1="-0.45" y1="-2.42" x2="-0.05" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="0.05" y1="-2.42" x2="0.45" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="0.55" y1="-2.42" x2="0.95" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="1.05" y1="-2.42" x2="1.45" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="1.55" y1="-2.42" x2="1.95" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="-0.95" y1="-2.42" x2="-0.55" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="-1.45" y1="-2.42" x2="-1.05" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="-1.95" y1="-2.42" x2="-1.55" y2="-2.18" layer="51" rot="R90"/>
+<rectangle x1="-1.45" y1="0.15" x2="-0.15" y2="1.45" layer="31"/>
+<rectangle x1="0.15" y1="0.15" x2="1.45" y2="1.45" layer="31" rot="R270"/>
+<rectangle x1="-1.45" y1="-1.45" x2="-0.15" y2="-0.15" layer="31" rot="R90"/>
+<rectangle x1="0.15" y1="-1.45" x2="1.45" y2="-0.15" layer="31" rot="R180"/>
+<circle x="-2.7" y="2.7" radius="0.2032" width="0" layer="21"/>
+<text x="0.127" y="3.048" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3.048" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 </library>
@@ -3572,24 +3633,24 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="SparkFun-Capacitors" package="0603-CAP" value="10uF" x="30.48" y="19.685" rot="R180">
+<element name="C1" library="SparkFun-Capacitors" package="0603" value="10uF" x="30.48" y="19.685" rot="R180">
 <attribute name="PROD_ID" value="CAP-11015" x="30.48" y="19.685" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C8" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="2.54" y="12.065" rot="R180">
+<element name="C8" library="SparkFun-Capacitors" package="0603" value="0.1uF" x="2.54" y="12.065" rot="R180">
 <attribute name="PROD_ID" value="CAP-00810" x="2.54" y="12.065" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="2.54" y="12.065" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C6" library="SparkFun-Capacitors" package="0603-CAP" value="2.2uF" x="9.525" y="14.605" rot="R180">
+<element name="C6" library="SparkFun-Capacitors" package="0603" value="2.2uF" x="9.525" y="14.605" rot="R180">
 <attribute name="PROD_ID" value="CAP-07888" x="9.525" y="14.605" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C12" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="11.43" y="10.16" rot="R90">
+<element name="C12" library="SparkFun-Capacitors" package="0603" value="0.1uF" x="11.43" y="10.16" rot="R90">
 <attribute name="PROD_ID" value="CAP-00810" x="11.43" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="11.43" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C9" library="SparkFun-Capacitors" package="0603-CAP" value="47pF" x="8.128" y="8.5852">
+<element name="C9" library="SparkFun-Capacitors" package="0603" value="47pF" x="8.128" y="8.5852">
 <attribute name="PROD_ID" value="CAP-08913" x="8.128" y="8.5852" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C14" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="16.51" y="14.605" rot="R180">
+<element name="C14" library="SparkFun-Capacitors" package="0603" value="0.1uF" x="16.51" y="14.605" rot="R180">
 <attribute name="PROD_ID" value="CAP-00810" x="16.51" y="14.605" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="16.51" y="14.605" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
@@ -3597,100 +3658,100 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="PROD_ID" value="CAP-00811" x="17.78" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="10uF" x="17.78" y="5.08" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C11" library="SparkFun-Capacitors" package="0603-CAP" value="47pF" x="8.128" y="4.7752">
+<element name="C11" library="SparkFun-Capacitors" package="0603" value="47pF" x="8.128" y="4.7752">
 <attribute name="PROD_ID" value="CAP-08913" x="8.128" y="4.7752" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C2" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="35.56" y="8.89" rot="R270">
+<element name="C2" library="SparkFun-Capacitors" package="0603" value="0.1uF" x="35.56" y="8.89" rot="R270">
 <attribute name="PROD_ID" value="CAP-00810" x="35.56" y="8.89" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C3" library="SparkFun-Capacitors" package="0603-CAP" value="10pF" x="29.21" y="8.89" rot="R270">
+<element name="C3" library="SparkFun-Capacitors" package="0603" value="10pF" x="29.21" y="8.89" rot="R270">
 <attribute name="PROD_ID" value="CAP-11812" x="29.21" y="8.89" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C4" library="SparkFun-Capacitors" package="0603-CAP" value="10pF" x="34.29" y="8.89" rot="R90">
+<element name="C4" library="SparkFun-Capacitors" package="0603" value="10pF" x="34.29" y="8.89" rot="R90">
 <attribute name="PROD_ID" value="CAP-11812" x="34.29" y="8.89" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C5" library="SparkFun-Capacitors" package="0805" value="1.0uF" x="9.525" y="19.558">
 <attribute name="PROD_ID" value="CAP-11625" x="9.525" y="19.558" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C7" library="SparkFun-Capacitors" package="0603-CAP" value="5.6pF" x="41.656" y="13.9945">
+<element name="C7" library="SparkFun-Capacitors" package="0603" value="5.6PF" x="41.656" y="13.9945">
 <attribute name="PROD_ID" value="CAP-12456" x="41.656" y="13.9945" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" value="5.6PF" x="41.656" y="13.9945" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C10" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="22.86" y="12.7">
+<element name="C10" library="SparkFun-Capacitors" package="0603" value="0.1uF" x="22.86" y="12.7">
 <attribute name="PROD_ID" value="CAP-00810" x="22.86" y="12.7" size="1.778" layer="27" display="off"/>
 </element>
-<element name="D2" library="SparkFun-LED" package="LED-0603" value="RED" x="15.875" y="19.05" rot="R270">
-<attribute name="PROD_ID" value="DIO-00819" x="15.875" y="19.05" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="D2" library="SparkFun-LED" package="LED-0603" value="RED" x="15.875" y="19.05">
+<attribute name="PROD_ID" value="DIO-00819" x="15.875" y="19.05" size="1.778" layer="27" display="off"/>
 </element>
-<element name="D3" library="SparkFun-LED" package="LED-0603" value="BLUE" x="15.875" y="20.32" rot="R270">
-<attribute name="PROD_ID" value="DIO-08575" x="15.875" y="20.32" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="D3" library="SparkFun-LED" package="LED-0603" value="BLUE" x="15.875" y="20.32">
+<attribute name="PROD_ID" value="DIO-08575" x="15.875" y="20.32" size="1.778" layer="27" display="off"/>
 </element>
-<element name="D1" library="SparkFun-DiscreteSemi" package="SOD-323" value="BAT20J" x="9.525" y="12.954">
+<element name="D1" library="SparkFun-DiscreteSemi" package="SOD-323" value="1A/23V/620mV" x="9.525" y="12.954">
 <attribute name="PROD_ID" value="DIO-11623" x="9.525" y="12.954" size="1.778" layer="27" display="off"/>
 </element>
-<element name="E1" library="SparkFun-RF" package="TRACE_ANTENNA_2.4GHZ_25.7MM" value="ANTENNATRACE" x="47.752" y="14.6295" rot="R270"/>
 <element name="F1" library="SparkFun-PowerIC" package="PTC-1206" value="500mA" x="8.255" y="10.795">
 <attribute name="PROD_ID" value="RES-11150" x="8.255" y="10.795" size="1.778" layer="27" display="off"/>
 </element>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LETTER" x="-5.08" y="-21.59"/>
 <element name="L1" library="SparkFun-Passives" package="0603" value="DNP" x="39.37" y="13.0937" rot="R270"/>
 <element name="L2" library="SparkFun-Passives" package="0603" value="DNP" x="43.942" y="13.5255" rot="R270"/>
-<element name="D5" library="SparkFun-LED" package="LED-0603" value="GREEN" x="15.875" y="16.51" rot="R90">
-<attribute name="PROD_ID" value="DIO-00821" x="15.875" y="16.51" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="D5" library="SparkFun-LED" package="LED-0603" value="GREEN" x="15.875" y="16.51" rot="R180">
+<attribute name="PROD_ID" value="DIO-00821" x="15.875" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="D4" library="SparkFun-LED" package="LED-0603" value="Yellow" x="15.875" y="17.78" rot="R90">
-<attribute name="PROD_ID" value="DIO-09003" x="15.875" y="17.78" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="D4" library="SparkFun-LED" package="LED-0603" value="Yellow" x="15.875" y="17.78" rot="R180">
+<attribute name="PROD_ID" value="DIO-09003" x="15.875" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_.2" value="SFE_LOGO_NAME.2_INCH" x="53.34" y="1.651" rot="R90"/>
 <element name="LOGO2" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="7.493" y="1.778"/>
-<element name="R1" library="SparkFun-Resistors" package="0603-RES" value="12k" x="36.83" y="8.89" rot="R90">
+<element name="R1" library="SparkFun-Resistors" package="0603" value="12k" x="36.83" y="8.89" rot="R90">
 <attribute name="PROD_ID" value="RES-10327" x="36.83" y="8.89" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R13" library="SparkFun-Resistors" package="0603-RES" value="1K" x="27.94" y="5.08" rot="R270">
+<element name="R13" library="SparkFun-Resistors" package="0603" value="1k" x="27.94" y="5.08" rot="R270">
 <attribute name="PROD_ID" value="RES-07856" x="27.94" y="5.08" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" value="1K" x="27.94" y="5.08" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" value="1k" x="27.94" y="5.08" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R7" library="SparkFun-Resistors" package="0603-RES" value="27" x="8.128" y="7.3152">
+<element name="R7" library="SparkFun-Resistors" package="0603" value="27" x="8.128" y="7.3152">
 <attribute name="PROD_ID" value="RES-09334" x="8.128" y="7.3152" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" value="27" x="8.128" y="7.3152" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R8" library="SparkFun-Resistors" package="0603-RES" value="27" x="8.128" y="6.0452">
+<element name="R8" library="SparkFun-Resistors" package="0603" value="27" x="8.128" y="6.0452">
 <attribute name="PROD_ID" value="RES-09334" x="8.128" y="6.0452" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" value="27" x="8.128" y="6.0452" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R3" library="SparkFun-Resistors" package="0603-RES" value="200" x="19.05" y="19.05">
+<element name="R3" library="SparkFun-Resistors" package="0603" value="200" x="19.05" y="19.05">
 <attribute name="PROD_ID" value="RES-08220" x="19.05" y="19.05" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R16" library="SparkFun-Resistors" package="0603-RES" value="1K" x="19.05" y="16.51" rot="R180">
+<element name="R16" library="SparkFun-Resistors" package="0603" value="1k" x="19.05" y="16.51" rot="R180">
 <attribute name="PROD_ID" value="RES-07856" x="19.05" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" value="1K" x="19.05" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" value="1k" x="19.05" y="16.51" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R2" library="SparkFun-Resistors" package="0603-RES" value="10K" x="40.64" y="17.145" rot="R270">
+<element name="R2" library="SparkFun-Resistors" package="0603" value="10k" x="40.64" y="17.145" rot="R270">
 <attribute name="PROD_ID" value="RES-00824" x="40.64" y="17.145" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R4" library="SparkFun-Resistors" package="0603-RES" value="200" x="26.035" y="20.32" rot="R90">
+<element name="R4" library="SparkFun-Resistors" package="0603" value="200" x="26.035" y="20.32" rot="R90">
 <attribute name="PROD_ID" value="RES-08220" x="26.035" y="20.32" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R5" library="SparkFun-Resistors" package="0603-RES" value="10K" x="38.1" y="8.89" rot="R270">
+<element name="R5" library="SparkFun-Resistors" package="0603" value="10k" x="38.1" y="8.89" rot="R270">
 <attribute name="PROD_ID" value="RES-00824" x="38.1" y="8.89" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R6" library="SparkFun-Resistors" package="0603-RES" value="200" x="19.05" y="20.32" rot="R180">
+<element name="R6" library="SparkFun-Resistors" package="0603" value="200" x="19.05" y="20.32" rot="R180">
 <attribute name="PROD_ID" value="RES-08220" x="19.05" y="20.32" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R15" library="SparkFun-Resistors" package="0603-RES" value="1K" x="19.05" y="17.78" rot="R180">
+<element name="R15" library="SparkFun-Resistors" package="0603" value="1k" x="19.05" y="17.78" rot="R180">
 <attribute name="PROD_ID" value="RES-07856" x="19.05" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" value="1K" x="19.05" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" value="1k" x="19.05" y="17.78" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R17" library="SparkFun-Resistors" package="0603-RES" value="10K" x="39.37" y="20.32" rot="R90">
+<element name="R17" library="SparkFun-Resistors" package="0603" value="10k" x="39.37" y="20.32" rot="R90">
 <attribute name="PROD_ID" value="RES-00824" x="39.37" y="20.32" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R12" library="SparkFun-Resistors" package="0603-RES" value="1K" x="30.48" y="5.08" rot="R90">
+<element name="R12" library="SparkFun-Resistors" package="0603" value="1k" x="30.48" y="5.08" rot="R90">
 <attribute name="PROD_ID" value="RES-07856" x="30.48" y="5.08" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" value="1K" x="30.48" y="5.08" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" value="1k" x="30.48" y="5.08" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="U4" library="SparkFun-DigitalIC" package="SSOP20_L" value="FTS31XS-U" x="16.51" y="10.16" rot="R180">
 <attribute name="PROD_ID" value="IC-11524" x="16.51" y="10.16" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U2" library="esp8266-development-board" package="QFN32" value="ESP8266" x="34.29" y="15.24" rot="R180">
+<element name="U2" library="SparkFun-RF" package="QFN32-5X5MM" value="ESP8266" x="34.29" y="15.24" rot="R180">
 <attribute name="PROD_ID" value="IC-12452" x="34.29" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="U3" library="esp8266-development-board" package="SO08" value="AT25SF041-SOIC8" x="25.4" y="15.875" rot="R90">
@@ -3702,19 +3763,19 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="Y1" library="things" package="CRYSTAL-SMD-3.2X2.5" value="26MHz" x="31.75" y="8.89">
 <attribute name="PROD_ID" value="XTAL-12454" x="31.75" y="8.89" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R14" library="SparkFun-Resistors" package="0603-RES" value="10K" x="24.765" y="20.32" rot="R90">
+<element name="R14" library="SparkFun-Resistors" package="0603" value="10k" x="24.765" y="20.32" rot="R90">
 <attribute name="PROD_ID" value="RES-00824" x="24.765" y="20.32" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
-<element name="R11" library="SparkFun-Resistors" package="0603-RES" value="10K" x="22.86" y="5.08" rot="R90">
+<element name="R11" library="SparkFun-Resistors" package="0603" value="10k" x="22.86" y="5.08" rot="R90">
 <attribute name="PROD_ID" value="RES-00824" x="22.86" y="5.08" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
 <element name="SJ2" library="SparkFun-Passives" package="PTH-JUMPER-2-NO_NO_SILK" value="SLEEP-PTH" x="38.1" y="5.08"/>
 <element name="JP2" library="SparkFun-Connectors" package="1X10_LOCK_NS" value="" x="16.51" y="1.27"/>
 <element name="JP3" library="SparkFun-Connectors" package="1X10_LOCK_NS" value="" x="16.51" y="24.13"/>
-<element name="STANDOFF3" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="43.815" y="22.86"/>
-<element name="STANDOFF1" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="43.815" y="2.54"/>
-<element name="STANDOFF2" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="12.065" y="22.86"/>
-<element name="STANDOFF4" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="12.065" y="2.54"/>
+<element name="STANDOFF3" library="SparkFun-Hardware" package="STAND-OFF" value="STAND-OFF" x="43.815" y="22.86"/>
+<element name="STANDOFF1" library="SparkFun-Hardware" package="STAND-OFF" value="STAND-OFF" x="43.815" y="2.54"/>
+<element name="STANDOFF2" library="SparkFun-Hardware" package="STAND-OFF" value="STAND-OFF" x="12.065" y="22.86"/>
+<element name="STANDOFF4" library="SparkFun-Hardware" package="STAND-OFF" value="STAND-OFF" x="12.065" y="2.54"/>
 <element name="JP4" library="SparkFun-Connectors" package="JST-2-PTH" value="" x="5.969" y="16.51" rot="R90">
 <attribute name="PROD_ID" value="CONN-09863" x="5.969" y="16.51" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 <attribute name="SKU" value="PRT-09914" x="5.969" y="16.51" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
@@ -3723,20 +3784,21 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="JP6" library="SparkFun-Connectors" package="SCREWTERMINAL-3.5MM-2-NS" value="" x="3.81" y="14.732" rot="R90">
 <attribute name="PROD_ID" value="CONN-08399" x="3.81" y="14.732" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
-<element name="S1" library="SparkFun-Electromechanical" package="SWITCH-SPST-SMD-A" value="" x="4.572" y="22.606">
+<element name="S1" library="SparkFun-Switches" package="SWITCH_SPST_SMD_A" value="" x="4.572" y="22.606">
 <attribute name="PROD_ID" value="SWCH-10651" x="4.572" y="22.606" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<attribute name="SF_SKU" value="COM-10860" x="4.572" y="22.606" size="1.778" layer="27" display="off"/>
 </element>
 <element name="SJ1" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="PWRLED" x="19.685" y="19.05" rot="MR180"/>
-<element name="Q1" library="SparkFun-DiscreteSemi" package="SOT23-3" value="MMBT2222A" x="25.4" y="6.985" rot="R180">
+<element name="Q1" library="SparkFun-DiscreteSemi" package="SOT23-3" value="600mA/40V" x="25.4" y="6.985" rot="R180">
 <attribute name="PROD_ID" value="TRANS-08049" x="25.4" y="6.985" size="1.778" layer="27" font="vector" ratio="15" rot="R180" display="off"/>
 </element>
-<element name="Q2" library="SparkFun-DiscreteSemi" package="SOT23-3" value="MMBT2222A" x="25.4" y="10.795">
+<element name="Q2" library="SparkFun-DiscreteSemi" package="SOT23-3" value="600mA/40V" x="25.4" y="10.795">
 <attribute name="PROD_ID" value="TRANS-08049" x="25.4" y="10.795" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
-<element name="R9" library="SparkFun-Resistors" package="0603-RES" value="10K" x="27.94" y="8.89" rot="R270">
+<element name="R9" library="SparkFun-Resistors" package="0603" value="10k" x="27.94" y="8.89" rot="R270">
 <attribute name="PROD_ID" value="RES-00824" x="27.94" y="8.89" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>
 </element>
-<element name="R10" library="SparkFun-Resistors" package="0603-RES" value="10K" x="22.86" y="8.89" rot="R90">
+<element name="R10" library="SparkFun-Resistors" package="0603" value="10k" x="22.86" y="8.89" rot="R90">
 <attribute name="PROD_ID" value="RES-00824" x="22.86" y="8.89" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
 <element name="FID2" library="SparkFun-Aesthetics" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="4.572" y="1.27"/>
@@ -3752,6 +3814,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="J2" library="SparkFun-Connectors" package="USB-B-MICRO-SMD_V03" value="" x="2.159" y="6.35">
 <attribute name="PROD_ID" value="CONN-11752" x="2.159" y="6.35" size="0.8128" layer="27" font="vector" ratio="15" display="off"/>
 </element>
+<element name="E1" library="SparkFun-RF" package="TRACE_ANTENNA_2.4GHZ_25.7MM" value="" x="47.752" y="14.6295" rot="R270"/>
 </elements>
 <signals>
 <signal name="VCC">
@@ -3880,8 +3943,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="L2" pad="2"/>
 <contactref element="U3" pad="4"/>
 <contactref element="C10" pad="2"/>
-<contactref element="E1" pad="GND"/>
-<contactref element="E1" pad="GND2"/>
 <contactref element="R17" pad="1"/>
 <contactref element="C8" pad="2"/>
 <contactref element="C11" pad="2"/>
@@ -3889,7 +3950,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="U4" pad="16"/>
 <contactref element="U4" pad="6"/>
 <contactref element="C14" pad="2"/>
-<contactref element="C13" pad="C"/>
+<contactref element="C13" pad="-"/>
 <contactref element="C12" pad="2"/>
 <contactref element="U1" pad="2"/>
 <contactref element="C6" pad="2"/>
@@ -3924,9 +3985,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="2.159" y="10.033" extent="1-16" drill="0.381"/>
 <via x="2.159" y="2.667" extent="1-16" drill="0.381"/>
 <contactref element="SJ1" pad="1"/>
-<wire x1="47.982" y1="18.0095" x2="45.9495" y2="18.0095" width="0.762" layer="1"/>
-<wire x1="45.9495" y1="18.0095" x2="45.72" y2="17.78" width="0.762" layer="1"/>
-<wire x1="45.72" y1="16.51" x2="45.72" y2="17.78" width="0.762" layer="1"/>
 <via x="33.3502" y="6.4516" extent="1-16" drill="0.381"/>
 <wire x1="16.1925" y1="12.8397" x2="16.1925" y2="14.0725" width="0.4064" layer="1"/>
 <wire x1="16.1925" y1="14.0725" x2="15.66" y2="14.605" width="0.4064" layer="1"/>
@@ -3943,9 +4001,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="JP2" pad="10"/>
 <contactref element="J1" pad="P$2"/>
 <contactref element="J1" pad="P$1"/>
-<wire x1="46.99" y1="16.129" x2="47.371" y2="16.129" width="0.762" layer="1"/>
-<wire x1="47.371" y1="16.129" x2="47.6905" y2="15.8095" width="0.762" layer="1"/>
-<wire x1="47.982" y1="15.8095" x2="47.6905" y2="15.8095" width="0.762" layer="1"/>
 <via x="47.244" y="11.811" extent="1-16" drill="0.381"/>
 <via x="47.244" y="6.731" extent="1-16" drill="0.381"/>
 <via x="47.244" y="4.191" extent="1-16" drill="0.381"/>
@@ -3959,6 +4014,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="J2" pad="SHIELD3"/>
 <contactref element="J2" pad="SHIELD2"/>
 <contactref element="J2" pad="SHIELD1"/>
+<contactref element="E1" pad="GND2"/>
+<contactref element="E1" pad="GND"/>
+<wire x1="47.982" y1="15.8095" x2="47.6905" y2="15.8095" width="0.762" layer="1"/>
+<wire x1="47.982" y1="18.0095" x2="47.2195" y2="18.0095" width="0.762" layer="1"/>
+<wire x1="47.2195" y1="18.0095" x2="46.99" y2="17.78" width="0.762" layer="1"/>
+<wire x1="47.6905" y1="15.8095" x2="47.371" y2="16.129" width="0.762" layer="1"/>
+<wire x1="47.371" y1="16.129" x2="47.244" y2="16.129" width="0.762" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="U2" pad="31"/>
@@ -4364,9 +4426,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="26.035" y1="21.082" x2="26.035" y2="21.17" width="0.2032" layer="1"/>
 </signal>
 <signal name="TRACE_ANT">
-<contactref element="E1" pad="ANT"/>
 <contactref element="SJ3" pad="2"/>
-<wire x1="47.1487" y1="14.6295" x2="47.982" y2="14.6295" width="0.4572" layer="1"/>
+<contactref element="E1" pad="ANT"/>
+<wire x1="47.982" y1="14.6295" x2="47.1487" y2="14.6295" width="0.4572" layer="1"/>
 </signal>
 <signal name="N$9">
 <contactref element="R6" pad="2"/>
@@ -4375,7 +4437,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signal>
 <signal name="USBVCC">
 <contactref element="U4" pad="15"/>
-<contactref element="C13" pad="A"/>
+<contactref element="C13" pad="+"/>
 <contactref element="C12" pad="1"/>
 <contactref element="F1" pad="2"/>
 <contactref element="D1" pad="A"/>
@@ -4686,33 +4748,45 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <approved hash="19,16,4b78f46fe7feb307"/>
 <approved hash="19,16,0b775af28d082369"/>
 <approved hash="19,1,ea779935993fea7d"/>
-<approved hash="3,16,ff0a521986072b14"/>
 <approved hash="3,1,5839320b32f858ca"/>
 <approved hash="4,1,abd634112f0bfbe1"/>
 <approved hash="4,1,da3102d060890518"/>
-<approved hash="19,1,6a5a99189b38687a"/>
-<approved hash="19,1,6a58991a874c740e"/>
-<approved hash="4,1,a7256e9794804e36"/>
-<approved hash="4,1,fb5b6feca3fe504b"/>
-<approved hash="4,1,eb03a95632048dca"/>
-<approved hash="19,1,e57ff4bdf63ce7fe"/>
-<approved hash="19,1,f85fe99dee3cfffe"/>
-<approved hash="19,1,fd9fec5dee3cfffe"/>
-<approved hash="19,1,f85475967234fff6"/>
-<approved hash="19,1,e57468b66a34e7f6"/>
-<approved hash="19,1,fd9470567234fff6"/>
-<approved hash="19,1,957844ba463c97fe"/>
-<approved hash="19,1,8d985c5a5e3c8ffe"/>
-<approved hash="19,1,8858599a5e3c8ffe"/>
-<approved hash="19,1,c6089cf02a8d2695"/>
 <approved hash="19,1,a613575602b9c115"/>
 <approved hash="19,1,5bb62e1e3d255b93"/>
 <approved hash="5,1,31c41213ba4f3d57"/>
-<approved hash="5,1,7c59f7c4f1d2705a"/>
 <approved hash="19,1,1e8c247575dcf89d"/>
 <approved hash="19,1,bdcee1a16461ba06"/>
 <approved hash="19,1,05f30a6f4e6d41f1"/>
 <approved hash="19,1,0fa90ab54eb74bab"/>
+<approved hash="5,1,3a9772d8ac4b749e"/>
+<approved hash="3,16,ff0a521986072b14"/>
+<approved hash="3,1,5befd5e1d5e05bee"/>
+<approved hash="4,1,f3f94cf3454318f7"/>
+<approved hash="4,1,3541dbc1d4c4b6ba"/>
+<approved hash="19,1,6a5a99189b38687a"/>
+<approved hash="19,1,6a58991a874c740e"/>
+<approved hash="4,1,fb5b6feca3fe504b"/>
+<approved hash="4,1,eb03a95632048dca"/>
+<approved hash="4,1,a7256e9794804e36"/>
+<approved hash="19,1,fd9fec5dee3cfffe"/>
+<approved hash="19,1,f85fe99dee3cfffe"/>
+<approved hash="19,1,e57ff4bdf63ce7fe"/>
+<approved hash="19,1,fd9470567234fff6"/>
+<approved hash="19,1,e57468b66a34e7f6"/>
+<approved hash="19,1,f85475967234fff6"/>
+<approved hash="19,1,8d985c5a5e3c8ffe"/>
+<approved hash="19,1,8858599a5e3c8ffe"/>
+<approved hash="19,1,957844ba463c97fe"/>
+<approved hash="19,1,c6089cf02a8d2695"/>
+<approved hash="5,1,239776edf68aa4b0"/>
+<approved hash="19,1,57ff556f232eda13"/>
+<approved hash="19,1,c4f0ad086b25b921"/>
+<approved hash="5,1,1d0731531ab78489"/>
+<approved hash="5,1,7c59f7c4f1d2705a"/>
+<approved hash="19,1,83ab1a489d9cdc08"/>
+<approved hash="19,1,cb691e985e3d6f95"/>
+<approved hash="19,1,501c9a56a1f670a2"/>
+<approved hash="19,1,4085b6d7381fa2da"/>
 <approved hash="19,16,5d5102316e93cc03"/>
 <approved hash="19,16,b612d34a5dd0c578"/>
 <approved hash="19,16,f438ad991ca3bac4"/>
