@@ -1,9 +1,10 @@
 SparkFun ESP8266 Thing Development Board - 4H National Youth Science Day Version
 ========================================
 
-![SparkFun ESP8266 Thing Development Board](https://cdn.sparkfun.com//assets/parts/1/1/1/9/7/13711-01.jpg)
+![SparkFun ESP8266 Thing Development Board - 4H Top](https://github.com/sparkfun/ESP8266_Thing_Dev_4H/raw/master/Hardware/Artwork/ESP8266-Thing-Dev_board-4H_top.png)
+![SparkFun ESP8266 Thing Development Board - 4H Bottom](https://github.com/sparkfun/ESP8266_Thing_Dev_4H/raw/master/Hardware/Artwork/ESP8266-Thing-Dev_board-4H_bottom.png)
 
-[*SparkFun ESP8266 Thing Development Board  (WRL-13711)*](https://www.sparkfun.com/products/13711)
+[*SparkFun ESP8266 Thing Development Board  - 4H Version*](https://www.sparkfun.com/products/13711)
 
 The [SparkFun ESP8266 Thing Development Board](https://www.sparkfun.com/products/13711) is a breakout and development board for the ESP8266 WiFi SoC. Why the name? We lovingly call it the Thing because it's the perfect foundation for your Internet of Things (IoT) project. The ESP8266 is an extremely cost-effective WiFi module, that can be programmed just like any microcontroller, and wiggle I/O while it communicates with the world-wide-web.
 
