@@ -68,6 +68,11 @@ char ssid [30];
 // this makes the code easlier to understand...
 #define BITS_PER_BYTE 8 
 
+// Define a delay in seconds for our WiFi search
+// This delay is used, along with a random number to present SSID collision
+// when multiple boards are startup at the same time. 
+#define WIFI_STARTUP_DELAY 6
+
 // Variable that holds the SSID slot number
 int ssidSlotNumber = -1;
 
@@ -76,7 +81,7 @@ int ssidSlotNumber = -1;
 #define SlotShortDelay  400
 
 // How many times do we telegraph out our SSID number via the onboard LED
-int nFlash = 3;
+int nFlash = 2;
 
 // this is always handy 
 #define LED_PIN 5
@@ -180,6 +185,8 @@ void setup() {
   Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, HIGH);
+
+  pinMode(4, INPUT_PULLUP);//Tilt Sensor
   
   pinMode(12, INPUT_PULLUP);// sets pin for tilt switch counter
 
@@ -264,6 +271,9 @@ void loop() {
       for (byte x = 0 ; x < RATE_SIZE ; x++)
         beatAvg += rates[x];
       beatAvg /= RATE_SIZE;
+      // Serial.print("BEATS: "); Serial.println(beatAvg);
+      // Serial.print("TEMP: "); Serial.println(temperatureF);      
+
     }
   }
 
@@ -273,7 +283,7 @@ void loop() {
  
   server.handleClient();
 
-  Serial.println(counter);
+  // Serial.println(counter);
 
 }
 
@@ -402,7 +412,8 @@ bool setupWiFiSSID(void){
 
     Serial.println("Starting delay");
     randomSeed(analogRead(0)); // Use the noise of pin 0 to seed the random generator
-    delay(random(3000)); // random number with a max value of 3000, which is 3 seconds 
+    delay(random(WIFI_STARTUP_DELAY * 1000)); // random number with a max value of WIFI_STARTUP_DELAY seconds
+
 
     // okay, find an open slot
     ssidSlotNumber = findOpenSSIDSlot();
