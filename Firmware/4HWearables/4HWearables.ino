@@ -323,7 +323,7 @@ void switchPressed ()
 //    This function returns an integer that represents an "open" SSID slot for this device.
 //    Where a "Slot" is just a number that is appended to the SSID basename. 
 //
-//    We limit our slots to 64 here, but can be adjusted via a #define at the top of this file.
+//    We limit our slots to SSID_MAXNUMBER here, but can be adjusted via a #define at the top of this file.
 //
 // Return Value:
 //     The number of the open SSID "slot". 
