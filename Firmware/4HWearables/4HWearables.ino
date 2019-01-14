@@ -53,8 +53,10 @@ unsigned long last_interrupt=0;
 /* Set these to your desired credentials. */
 char ssid [30];
 
-//-----------------------------------
-// For the Dynamic SSID logic
+//-------------------------------------------------------
+// For the Dynamic SSID logic at the end of this file.
+//
+// Dec 2018 - KDB   
 
 // need ceil()
 #include <math.h>
@@ -63,20 +65,21 @@ char ssid [30];
 #define SSID_BASENAME  "IncredibleWearables"
 
 // Max number of devices running at a time. This can be increased.
-#define SSID_MAXNUMBER 64
+// Byte aligned values (divisable by 8 values) are preferred
+#define SSID_MAXNUMBER 96
 
 // this makes the code easlier to understand...
 #define BITS_PER_BYTE 8 
 
 // Define a delay in seconds for our WiFi search
-// This delay is used, along with a random number to present SSID collision
+// This delay is used, along with a random number to prevent SSID collision
 // when multiple boards are startup at the same time. 
 #define WIFI_STARTUP_DELAY 6
 
-// Variable that holds the SSID slot number
+// Variable that holds the SSID slot number. Range of slots: 1 to (SSID_MAXNUMBER-1)
 int ssidSlotNumber = -1;
 
-// Delays for Slot Number output via LED (delay in ms)
+// Delays for Slot Number output via LED (delay in ms). See *telegraph* function below
 #define SlotLongDelay   2000
 #define SlotShortDelay  400
 
@@ -271,14 +274,14 @@ void loop() {
       for (byte x = 0 ; x < RATE_SIZE ; x++)
         beatAvg += rates[x];
       beatAvg /= RATE_SIZE;
-      // Serial.print("BEATS: "); Serial.println(beatAvg);
-      // Serial.print("TEMP: "); Serial.println(temperatureF);      
+      Serial.print("BEATS: "); Serial.println(beatAvg);
+      Serial.print("TEMP: "); Serial.println(temperatureF);      
 
     }
   }
 
   if (irValue < 50000)
-    Serial.print(" No finger?");
+    Serial.println(" No finger?");
 
  
   server.handleClient();
@@ -310,9 +313,8 @@ void switchPressed ()
   }
 } // end of switchPressed
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// Dynamic SSID generation
+// Dynamic SSID generation   - Dec 2018 - KDB
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // findOpenSSIDSlot()
@@ -410,10 +412,9 @@ bool setupWiFiSSID(void){
     // Why? If 10 of these devices are truned on at the same instant, there's a chance 
     // they find the same open SSID slot. The helps pepper the environment with a little delta T.
 
-    Serial.println("Starting delay");
+    Serial.println("Starting WiFi setup delay");
     randomSeed(analogRead(0)); // Use the noise of pin 0 to seed the random generator
     delay(random(WIFI_STARTUP_DELAY * 1000)); // random number with a max value of WIFI_STARTUP_DELAY seconds
-
 
     // okay, find an open slot
     ssidSlotNumber = findOpenSSIDSlot();
