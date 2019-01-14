@@ -9,10 +9,10 @@ To ensure each THING has a unique WiFi SSID, the following happens at startup of
 1. The THING is turned on.
 2. The THING waits for a few, random seconds to prevent two THINGS from selecting the same SSID.
 3. The THING scans all current WiFi networks, looking for other 4H THINGS.
-  * THING SSID names follow the pattern of **IncredibleWearableN**, where **"N"** is a number.
-  * If multiple THINGS are being used, each use different number for **"N"** in their SSID
+    * THING SSID names follow the pattern of **"IncredibleWearableN"**, where **"N"** is a number.
+    * If multiple THINGS are being used, each use different number for **"N"** in their SSID
 4. Once the THING selects a SSID, it flashes is LED **"N"** times to indicate what SSID number it is.
-  * This value is flashed twice at startup.
+    * This value is flashed twice at startup.
 
 For a majority of cases, this SSID selection methodology will determine a unique SSID for each 4H THING. When more than one THING is started at the same time, there is a small chance that two THINGS will select the same SSID number. If this occurs, the solution is to restart one of the THINGS, causing the THING to select a new SSID number.
 
@@ -24,4 +24,4 @@ The 4H Incredible Wearables network name is now "IncredibleWearableN", where N i
 This section is no longer valid and should be ignored.
 
 ### Page 18
-All parts of this page except the TROUBLESHOOTING section are no longer valid and should be ignored.
+All sections of this page except the TROUBLESHOOTING section are no longer valid and should be ignored.
